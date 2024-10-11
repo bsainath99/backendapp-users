@@ -1,46 +1,79 @@
-BackendApp Users
-A backend service for managing user data, providing essential functionalities such as user authentication, registration, and profile management.
 
-Features
-User registration and authentication (e.g., JWT, OAuth)
-CRUD operations for user profiles
-Secure password handling and encryption
-Error handling and input validation
-Installation
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/bsainath99/backendapp-users.git
-Navigate to the project directory:
-bash
-Copy code
-cd backendapp-users
-Install dependencies:
-bash
-Copy code
-mvn clean install
-Usage
-Start the application:
-bash
-Copy code
-mvn spring-boot:run
-Access the service at http://localhost:8080.
-API Endpoints
-POST /api/v1/users – Register a new user
-POST /api/v1/users/login – Login a user
-GET /api/v1/users/{id} – Retrieve user by ID
-PUT /api/v1/users/{id} – Update user details
-DELETE /api/v1/users/{id} – Delete a user
-Technologies
-Java
-Spring Boot
-Maven
-JWT Authentication
-Contributing
-Contributions are welcome! Please follow these steps:
+#  BackendApp Users - User Management Service
 
-Fork the project.
-Create your feature branch (git checkout -b feature/new-feature).
-Commit your changes (git commit -m 'Add new feature').
-Push to the branch (git push origin feature/new-feature).
-Open a pull request.
+
+BackendApp Users is a backend service designed to manage user accounts, authentication, and profile data. Built using Java and Spring Boot, it provides secure, scalable, and efficient user registration, login, and profile management features. The service includes features like JWT-based authentication, CRUD operations for user profiles, and password encryption. Perfect for developers looking to integrate robust user management into their applications.
+## Features
+- CRUD Operations: Create, Read, Update, and Delete blog posts and comments.
+- Exceptions: Executes an exception folder when user is not found
+- MySQL Database: Uses MySQL for data storage, with Spring Data JPA for ORM.
+- Swagger Documentation: Automatically generated API documentation for easier testing and exploration.
+
+
+## Technologies Used
+- Java: Programming language for building the application.
+- MySQL: Relational database management system for data persistence.
+- Spring Boot: Framework for creating the RESTful API.
+- Spring Security: For securing API endpoints and handling user authentication.
+- Postman: Tool for testing the API endpoints.
+## API Reference
+
+#### POST Mapping 
+
+```http
+  POST /addUser
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| User  | Object | Pass an user object in request body  |
+
+#### GET Mapping 
+```http
+  GET /user/{id}
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| User with Id  | Long | Pass an user id as path variable |
+
+```http
+  GET /users
+```
+Returns all Users
+
+#### PUT Mapping 
+```http
+  PUT /user/{id}
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| User with Id  | Long | Pass an user id as path variable |
+
+#### DELETE Mapping 
+```http
+  DELETE /user/{id}
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| User with Id  | Long | Pass an user id as path variable |
+
+
+
+## Deployment
+
+To deploy this project run
+
+```bash
+ Open file which conatins mail.java method() and click "Run as" --> Spring Boot App
+```
+
+
+## Installation
+
+- Clone the repository: git clone https://github.com/bsainath99/blog-app-apis.git
+- Navigate to the project directory: cd blog-app-apis
+- Set up the MySQL database and configure your application.properties file with the database credentials.
+- Run the application:  Open file which conatins mail.java method() and click "Run as" --> Spring Boot App
