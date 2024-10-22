@@ -3,6 +3,8 @@
 
 
 BackendApp Users is a backend service designed to manage user accounts, authentication, and profile data. Built using Java and Spring Boot, it provides secure, scalable, and efficient user registration, login, and profile management features. The service includes features like JWT-based authentication, CRUD operations for user profiles, and password encryption. Perfect for developers looking to integrate robust user management into their applications.
+
+For the front end application implementation, I've done a separate project with name **frontend-users** with github link: https://github.com/bsainath99/frontend-users.git
 ## Features
 - CRUD Operations: Create, Read, Update, and Delete blog posts and comments.
 - Exceptions: Executes an exception folder when user is not found
